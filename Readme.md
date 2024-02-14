@@ -11,7 +11,7 @@ This project is an API built using **Java, Java Spring, AWS Simple Queue Service
 
 The Microservice was developed with Fernanda Kipper [Youtube Channel](https://youtu.be/a3tPHH8uwPc?si=vFf-S2H5i3IpVTjN), to demonstrate how to solve the [AnotaAi Backend Challenge](https://github.com/githubanotaai/new-test-backend-nodejs).
 
-## Steps of how implement the microservice
+## Steps on how to implement the microservice.
 [![Notion](https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=notion&logoColor=white)](https://www.notion.so/AWS-1bc71eaa91564d2189bc2066db6f62f0)
 
 ## Table of Contents
