@@ -25,7 +25,7 @@ The Microservice was developed for my [Youtube Channel](https://youtu.be/a3tPHH8
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/Fernanda-Kipper/desafio-anotaai-backend.git
+git@github.com:PedroH183/ApiAnotaAiChallenge.git
 ```
 
 2. Install dependencies with Maven
