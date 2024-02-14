@@ -15,7 +15,7 @@ public class ProductController {
      * Meu Controller é responsável apenas por comunicar com o service a logica
      * de manipulação com o banco de dados fica em service.
      * */
-    private ProductService service;
+    private final ProductService service;
 
     public ProductController(ProductService service){ this.service = service;}
 

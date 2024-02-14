@@ -14,7 +14,7 @@ import com.pedrofreires.desafioanotai.domain.category.exceptions.CategoryNotFoun
 @Service
 public class ProductService {
 
-    private AwsSnsService snsService;
+    private final AwsSnsService snsService;
     private final ProductRepository repository;
     private final CategoryService categoryService;
 

@@ -16,7 +16,7 @@ public class CategoryController {
      * Meu controller é responsável apenas por comunicar com o service não fica responsável por manipular dados
      * do banco de dados !
      * */
-    private CategoryService service;
+    private final CategoryService service;
 
     public CategoryController(CategoryService service){
         this.service = service;

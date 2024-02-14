@@ -1,10 +1,9 @@
 package com.pedrofreires.desafioanotai.services;
 
-import com.pedrofreires.desafioanotai.services.aws.AwsSnsService;
-import com.pedrofreires.desafioanotai.services.aws.MessageDTO;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
+import com.pedrofreires.desafioanotai.services.aws.MessageDTO;
 import com.pedrofreires.desafioanotai.domain.category.Category;
+import com.pedrofreires.desafioanotai.services.aws.AwsSnsService;
 import com.pedrofreires.desafioanotai.domain.category.CategoryDTO;
 import com.pedrofreires.desafioanotai.repositories.CategoryRepository;
 import com.pedrofreires.desafioanotai.domain.category.exceptions.CategoryNotFound;
