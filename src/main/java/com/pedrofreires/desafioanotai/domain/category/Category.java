@@ -37,4 +37,13 @@ public class Category {
         return json.toString(); // json.stringfy()
     }
 
+    public String toDeleteString(){
+        JSONObject json = new JSONObject();
+        json.put("id" , this.id);
+        json.put("type" , "category");
+        json.put("ownerId" , this.ownerId);
+        json.put("keyToDelete", true);
+
+        return json.toString();
+    }
 }

@@ -42,4 +42,13 @@ public class Product {
         return json.toString(); // json.stringfy()
     }
 
+    public String toDeleteString(){
+        JSONObject json = new JSONObject();
+        json.put("id" , this.id);
+        json.put("type" , "product");
+        json.put("ownerId" , this.ownerId);
+        json.put("keyToDelete", true);
+
+        return json.toString();
+    }
 }
