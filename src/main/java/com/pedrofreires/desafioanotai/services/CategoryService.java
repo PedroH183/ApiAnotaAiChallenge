@@ -1,5 +1,6 @@
 package com.pedrofreires.desafioanotai.services;
 
+import org.json.JSONObject;
 import org.springframework.stereotype.Service;
 import com.pedrofreires.desafioanotai.services.aws.MessageDTO;
 import com.pedrofreires.desafioanotai.domain.category.Category;
@@ -37,7 +38,7 @@ public class CategoryService {
         Category category = this.repository.findById(id)
                 .orElseThrow(CategoryNotFound::new);
 
-        if( categoryData.title() != null) category.setTitle(categoryData.title());
+        if(categoryData.title() != null) category.setTitle(categoryData.title());
         if(categoryData.description() != null) category.setDescription(categoryData.description());
 
         this.repository.save(category);
@@ -47,10 +48,11 @@ public class CategoryService {
     }
 
     public void delete(String id) {
-        Category category = this.repository.findById(id)
+        Category categoryDeleted = this.repository.findById(id)
                 .orElseThrow(CategoryNotFound::new);
 
-        this.repository.delete(category);
+        this.snsService.publish(new MessageDTO(categoryDeleted.toDeleteString()));
+        this.repository.delete(categoryDeleted);
     }
 
     public Optional<Category> getView(String id){

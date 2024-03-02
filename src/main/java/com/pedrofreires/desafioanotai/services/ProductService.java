@@ -2,6 +2,7 @@ package com.pedrofreires.desafioanotai.services;
 
 import java.util.List;
 
+import org.json.JSONObject;
 import org.springframework.stereotype.Service;
 import com.pedrofreires.desafioanotai.domain.product.Product;
 import com.pedrofreires.desafioanotai.services.aws.MessageDTO;
@@ -63,5 +64,6 @@ public class ProductService {
                 .findById(id).orElseThrow(ProductNotFound::new);
 
         this.repository.delete(deletedProduct);
+        this.snsService.publish(new MessageDTO(deletedProduct.toDeleteString())); // enviando mensagem via sns
     }
 }
